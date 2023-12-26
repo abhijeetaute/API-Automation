@@ -1,6 +1,6 @@
- *.classpath
- *.project
- *.settings/
- target/
- test-output/
- 
+/test-output/
+/target/
+/.classpath
+/*.project
+/.settings
+/*.springBeans
