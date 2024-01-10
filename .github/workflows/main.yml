@@ -8,5 +8,6 @@ jobs :
     runs-on : ubuntu-latest
 
     steps :
-    - run : echo "Hellow World"
+    - name : run pom file
+    - run : mvn test
 
