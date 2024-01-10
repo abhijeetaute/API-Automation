@@ -17,8 +17,8 @@ jobs :
     - name : run pom file
       run : mvn test
 
-    - run : |
-        ls -l
+    - if : always()
+      run : ls -l
 
     - if : always()
       uses : actions/upload-artifact@master
