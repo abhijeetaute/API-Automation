@@ -17,7 +17,8 @@ jobs :
     - name : run pom file
       run : mvn test
 
+    - if : always()
     - uses : actions/upload-artifact@master
       with :
        name : automationReport.html
-       path : ./report/*
+       path : ./report/TestReport*.html
