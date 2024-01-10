@@ -21,9 +21,8 @@ jobs :
       run : |
            mkdir -p ${{ github.workspace }}/report
            cd report
-           ls
-           cd target/surefire-reports
            ls -l
+          
 
     - if : always()
       uses : actions/upload-artifact@master
