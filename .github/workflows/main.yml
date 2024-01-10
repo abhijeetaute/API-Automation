@@ -21,4 +21,4 @@ jobs :
       uses : actions/upload-artifact@master
       with :
        name : automationReport.html
-       path : ./report/TestReport.html
+       path : /report/*
