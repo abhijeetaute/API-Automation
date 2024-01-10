@@ -1,6 +1,9 @@
 name : First git action workflow
 
-on : [push, workflow_dispatch]
+on :
+ push :
+  branches:
+     'main'
 
 jobs :
   test :
@@ -8,6 +11,9 @@ jobs :
     runs-on : ubuntu-latest
 
     steps :
+    - name : checkout
+    - uses : actions/checkout@v1
+    
     - name : run pom file
     - run : mvn test
 
