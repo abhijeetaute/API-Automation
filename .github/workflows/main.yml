@@ -17,6 +17,10 @@ jobs :
     - name : run pom file
       run : mvn test
 
+    - run : |
+        cd ${{ github.workspace }}/report
+        ls -l
+
     - if : always()
       uses : actions/upload-artifact@master
       with :
