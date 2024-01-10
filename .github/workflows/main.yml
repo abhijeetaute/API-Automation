@@ -18,7 +18,6 @@ jobs :
       run : mvn test
 
     - run : |
-        cd ${{ github.workspace }}/report
         ls -l
 
     - if : always()
