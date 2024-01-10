@@ -17,3 +17,7 @@ jobs :
     - name : run pom file
       run : mvn test
 
+    - uses : actions/upload-artifacts@master
+      with :
+       name : automationReport.html
+       path : './automationReport*.html'
