@@ -19,7 +19,7 @@ jobs :
 
     - if : always()
       run : |
-           cd target
+           cd target/surefire-reports
            ls -l
 
     - if : always()
