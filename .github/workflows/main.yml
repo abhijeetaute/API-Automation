@@ -19,6 +19,8 @@ jobs :
 
     - if : always()
       run : |
+           mkdir -p ${{ github.workspace }}/report
+           cd report
            ls
            cd target/surefire-reports
            ls -l
