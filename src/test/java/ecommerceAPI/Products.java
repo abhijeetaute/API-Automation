@@ -26,7 +26,7 @@ public class Products extends BaseClass{
 	public void createProduct() throws Exception {
 		Map<String,Object> payload=Payloads.getCreateEmployeePayloadAsMap("TestUser",30341,24);
 		Response response=new ApplicationUtils().createProduct(payload);
-		Assert.assertEquals(response.statusCode(), 100);
+		Assert.assertEquals(response.statusCode(), 200);
 		
 	}
 
