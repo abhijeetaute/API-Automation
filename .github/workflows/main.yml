@@ -18,7 +18,9 @@ jobs :
       run : mvn test
 
     - if : always()
-      run : ls -l
+      run : |
+           cd target
+           ls -l
 
     - if : always()
       uses : actions/upload-artifact@master
