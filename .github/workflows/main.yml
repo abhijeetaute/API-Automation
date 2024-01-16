@@ -12,20 +12,19 @@ jobs :
 
     steps :
     - name : checkout
-      uses : actions/checkout@v1
+      uses : actions/checkout@v2
     
     - name : run pom file
       run : mvn test
 
     - if : always()
       run : |
-           mkdir -p ${{ github.workspace }}/report
-           cd report
-           ls -l
+            ls -l
+            cd report
           
 
     - if : always()
       uses : actions/upload-artifact@master
       with :
        name : automationReport.html
-       path : ./target/surefire-reports/index.html
+       path : ./report/TestReport*.html
