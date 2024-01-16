@@ -20,6 +20,7 @@ jobs :
 
     - if : always()
       run : |
+            cd $pwd
             ls -l
             cd report
           
