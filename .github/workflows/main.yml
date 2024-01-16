@@ -14,14 +14,19 @@ jobs :
     steps :
     - name : checkout
       uses : actions/checkout@v2
-    
+
+    - if : always()
+      run : |
+            cd report
+            rm -r TestReport.html
+            cd..
+            
     - name : run pom file
       run : mvn test
 
     - if : always()
       run : |
             cd report
-            rm -r TestReport.html
             ls -l
            
           
