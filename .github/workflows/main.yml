@@ -20,8 +20,7 @@ jobs :
 
     - if : always()
       run : |
-            cd target
-            cd ..
+            cd report
             ls -l
            
           
@@ -30,4 +29,4 @@ jobs :
       uses : actions/upload-artifact@master
       with :
        name : automationReport.html
-       path : ./TestReport*.html
+       path : ./report/TestReport.html
