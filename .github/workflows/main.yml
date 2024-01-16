@@ -23,11 +23,11 @@ jobs :
             cd target
             cd ..
             ls -l
-            cd report
+           
           
 
     - if : always()
       uses : actions/upload-artifact@master
       with :
        name : automationReport.html
-       path : ./report/TestReport*.html
+       path : ./TestReport*.html
