@@ -19,7 +19,7 @@ jobs :
       run : |
             cd report
             rm -r TestReport.html
-            cd..
+            cd ..
             
     - name : run pom file
       run : mvn test
