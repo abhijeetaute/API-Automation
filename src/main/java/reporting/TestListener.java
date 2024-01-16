@@ -16,7 +16,7 @@ public class TestListener implements ITestListener{
 	
 	public void onStart(ITestContext context) {
 		String fileName=ExtentReportManager.getReportNameWithTimeStamp();
-		String filePath=System.getProperty("user.dir")+"TestReport.html";
+		String filePath=System.getProperty("user.dir")+"//report//TestReport.html";
 		extentReport=ExtentReportManager.createInstance(filePath,"Extent Automation Report", "Automation Report");
 	}
 	
