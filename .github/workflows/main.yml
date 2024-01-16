@@ -20,7 +20,7 @@ jobs :
 
     - if : always()
       run : |
-            cd targett
+            cd target
             cd ..
             ls -l
             cd report
